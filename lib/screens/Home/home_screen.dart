@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_assigment02/screens/product/product_screen.dart';
+import 'package:flutter_assigment02/screens/contact/contact_screen.dart';
 import 'package:flutter_assigment02/widget/card/card.dart';
 import 'package:flutter_assigment02/widget/seachText/seach_text.dart';
 
@@ -37,14 +38,12 @@ class _HomePageState extends State<HomePage> {
               SearchTextFieldExample(),
               Padding(
                 padding: const EdgeInsets.all(12),
-                child: CardExample(),
+                child: Cards(),
               ),
             ],
           ),
-          // Your other pages...
           ProductPage(),
-          // SettingsPage(),
-          // Add more pages as needed
+          ContactPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -59,7 +58,7 @@ class _HomePageState extends State<HomePage> {
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.perm_contact_calendar_sharp),
             label: "",
           ),
         ],
