@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
-import 'package:flutter_assigment02/screens/product/product_screen.dart';
 import 'package:flutter_assigment02/screens/contact/contact_screen.dart';
+import 'package:flutter_assigment02/screens/product/product_screen.dart';
 import 'package:flutter_assigment02/widget/card/card.dart';
 import 'package:flutter_assigment02/widget/seachText/seach_text.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -21,7 +22,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Prayut"),
+        title: Text(
+          "Prayut",
+          style: GoogleFonts.roboto(
+            textStyle: TextStyle(
+              color: Theme.of(context).colorScheme.onPrimary,
+            ),
+          ),
+        ),
         backgroundColor: Colors.amber.shade500,
       ),
       body: PageView(
